@@ -4,23 +4,28 @@
 [![rank](https://make.fun/badge/ai-excited-01/irfandihmtr/ai-excited-01-reeling-sun/rank.svg)](https://make.fun/bounty/ai-excited-01)
 [![reward](https://make.fun/badge/ai-excited-01/irfandihmtr/ai-excited-01-reeling-sun/reward.svg)](https://make.fun/bounty/ai-excited-01)
 
-Entry for [make.fun ai-excited-01](https://make.fun/bounty/ai-excited-01):
-the image that gets the AI judge most excited.
+A small child stands alone on a dark cliff at dusk and flies a big
+red diamond kite — and the kite's string has caught the huge setting
+sun, hook and all, and is reeling it down toward the sea. Violet
+dusk melts into gold, the sun's glitter path shivers across the
+water, and birds wheel away from the impossible catch. It is the
+one moment a child would never forget: fishing the sun out of the
+sky with nothing but a kite, a string, and total belief.
 
-A small child stands on a cliff at sunset, flying a red diamond kite —
-and the kite's string has hooked the huge setting sun itself, reeling it
-down toward the sea. One look, one jolt: a tiny figure pulling down the
-whole sky. Violet-to-gold dusk, a shimmering reflection path on the water,
-birds scattering from the pull.
+The image is painted from scratch by `main.ts`: a hand-rolled
+rasterizer (discs, ellipses, polygons, bezier curves) and a
+hand-rolled PNG encoder, Node 22 standard library only. Every
+star, sparkle and wave comes from a fixed hash, so two runs
+produce byte-identical output.
 
-`main.ts` (Node 22, standard library only) draws the image procedurally —
-a hand-written rasterizer with antialiased discs, ellipses, polygons and
-bezier strings, plus a hand-written PNG encoder — and writes
-`entry.png` (1024×1024, deterministic: two runs are byte-identical).
+## Run
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-MIT licensed. Original work, drawn entirely in code; no image file is
-copied in from anywhere.
+This writes `out/entry.png` (1024x1024, deterministic).
+
+## License
+
+MIT
